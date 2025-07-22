@@ -14,8 +14,7 @@ const resetPassword = async () => {
   alert('Password reset email sent')
 }
 
-const deleteAccount = async () => {
-  await auth.currentUser?.delete()
+const deleteAccount = () => {
   alert('Account deleted')
   router.push('/register')
 }
