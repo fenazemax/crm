@@ -1,45 +1,64 @@
-# crm dashboard
+# 🚀 CRM система на Vue 3 + Firebase
 
-This template should help get you started developing with Vue 3 in Vite.
+Проект — простая CRM-система с авторизацией, системой задач и пользовательскими настройками.  
+Сделано на Vue 3 + TypeScript + Pinia + Firebase.
 
-## Recommended IDE Setup
+## 🔗 Демо
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+👉 [Открыть демо](https://fenazemax.github.io//crm)
 
-## Type Support for `.vue` Imports in TS
+## 🔐 Тестовый доступ
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Логин:** `test@test.com`
+- **Пароль:** `Test123!`
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## ⚙️ Установка и запуск
 
-## Project Setup
+1. **Склонировать репозиторий:**
 
-```sh
+```bash
+git clone https://github.com/fenazemax/crm.git
+cd crm
+```
+
+2. **Установить зависимости:**
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. **Запустить локально:**
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+4. **Собрать продакшн-сборку:**
 
-```sh
-npm run build
+```bash
+npm run dev
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Технологии
 
-```sh
-npm run test:unit
-```
+- Vue 3 (Composition API)
+- TypeScript
+- Pinia
+- Firebase Auth
+- SCSS-модули
+- Vite
 
-### Lint with [ESLint](https://eslint.org/)
+## Возможности
 
-```sh
-npm run lint
-```
+- Аутентификация через Firebase
+- Список задач
+- Управление пользователями
+- Настройки аккаунта (смена пароля, удаление)
+
+## Тестирование
+
+Используются [Vitest](https://vitest.dev/) и [@vue/test-utils](https://test-utils.vuejs.org/).
+
+По мере возможностей, тесты будут дописываться
