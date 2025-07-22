@@ -1,0 +1,45 @@
+:root {
+  --white: #ffffff;
+  --background: #f6fafd;
+  --bg-sidebar: #eaeef4;
+  --gray-50: #d6e1e6;
+  --gray-70: #7e92a2;
+  --gray-90: #526477;
+  --blue: #514ef3;
+  --blue-hover: #020091;
+  --navy: #092c4c;
+  --blue-light: #ececfe;
+}
+
+.btn-pointer {
+  cursor: pointer;
+}
+
+.border {
+  border-bottom: 1px solid var(--bg-sidebar);
+}
+
+.mail-item {
+  min-width: 188px;
+}
+
+.phone-item {
+  min-width: 113px;
+}
+
+.adress-item {
+  min-width: 178px;
+}
+
+.link-item {
+  min-width: 192px;
+}
+
+.scroll-item {
+  overflow-y: auto;
+}
+
+p,
+h5 {
+  margin: 0;
+}

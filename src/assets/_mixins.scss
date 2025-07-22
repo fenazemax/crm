@@ -1,0 +1,99 @@
+@use 'variables' as *;
+@mixin flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin image-count {
+  width: 40px;
+  height: 40px;
+  padding: 34px;
+  align-self: center;
+  border-radius: 60px;
+}
+
+@mixin counter-stat-0 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@mixin flexbox-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin date-address {
+  font-size: 20px;
+  color: $gray-70;
+}
+
+@mixin gray-descr {
+  font-size: 20px;
+  color: $gray-70;
+}
+
+@mixin navy-descr {
+  font-size: 24px;
+  color: $navy;
+}
+
+@mixin view-all {
+  text-decoration: none;
+  color: $bluecolor;
+  font-size: 20px;
+}
+
+@mixin modal__input-styles {
+  border: none;
+  background-color: $gray-30;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    outline: 1px solid $gray-50;
+  }
+  &:focus {
+    outline: 1px solid $gray-70;
+  }
+  &:active {
+    outline: 1px solid $gray-90;
+  }
+}
+
+@mixin modal-cancel-btn {
+  background-color: transparent;
+  border: none;
+  @include navy-descr;
+  font-size: 18px;
+  padding: 10px 55px;
+  border-radius: 70px;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray-10;
+  }
+  &:active {
+    background-color: $gray-50;
+  }
+}
+
+@mixin modal-save-btn {
+  background-color: $bluecolor;
+  color: $colorwhite;
+  padding: 10px 35px;
+  border-radius: 70px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $blueHover;
+  }
+  &:active {
+    background-color: $bluecolor-active;
+  }
+}
+
+@mixin def-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
