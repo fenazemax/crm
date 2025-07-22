@@ -20,6 +20,7 @@ const sortOptions: TOptions[] = [
   { label: 'Area', value: 'area' },
 ]
 const sortedBy = ref<keyof IDeal>('date')
+const filteredBy = ref<string | null>('all')
 const isAll = ref(false)
 const dealStore = useDealStore()
 const modalStore = useModalStore()
@@ -38,8 +39,8 @@ const updateDeal = (updatedDeal: IDeal) => {
   modalStore.closeModal()
 }
 
-const { sortedDeals } = useSortedDeals(dealStore.deals, sortedBy)
-const sortedDealsHalf = computed(() => sortedDeals.value.slice(0, 7))
+const { filteredSortedDeals } = useSortedDeals(dealStore.deals, sortedBy, filteredBy)
+const sortedDealsHalf = computed(() => filteredSortedDeals.value.slice(0, 7))
 </script>
 
 <template>
@@ -48,7 +49,7 @@ const sortedDealsHalf = computed(() => sortedDeals.value.slice(0, 7))
       <p class="deals__count">Total: {{ dealsCount }} deals</p>
       <div class="deals__sort-container">
         <CustomSortDeal v-model="sortedBy" :options="sortOptions" />
-        <CustomFilterDeal />
+        <CustomFilterDeal v-model="filteredBy" />
       </div>
     </div>
     <ul class="deals__list" v-if="isAll === false">
@@ -80,7 +81,7 @@ const sortedDealsHalf = computed(() => sortedDeals.value.slice(0, 7))
           <EditDealIcon />
         </button>
       </li>
-      <button class="deals__load" v-show="sortedDeals.length >= 7" @click="isAll = !isAll">Load More</button>
+      <button class="deals__load" v-show="filteredSortedDeals.length >= 7" @click="isAll = !isAll">Load More</button>
     </ul>
     <ul class="deals__list" v-else>
       <li class="deals__item">
@@ -96,7 +97,7 @@ const sortedDealsHalf = computed(() => sortedDeals.value.slice(0, 7))
         <p class="deals__head-item">Status</p>
         <p class="deals__head-item">Edit</p>
       </li>
-      <li class="deals__item scroll-item" v-for="deal in sortedDeals" :key="deal.id">
+      <li class="deals__item scroll-item" v-for="deal in filteredSortedDeals" :key="deal.id">
         <RouterLink :to="`/deal/${deal.id}`" class="deals__link">
           <img :src="deal.image" alt="" class="item__image" />
           <p class="deals__name">

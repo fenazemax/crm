@@ -89,8 +89,8 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
         </li>
       </ul>
     </div>
-    <div class="details__right" v-if="customerDeals">
-      <div class="details__info">
+    <div class="details__right">
+      <div class="details__info" v-if="customerDeals && customerDeals.length > 0">
         <p class="details__title">Recent Deals</p>
         <ul class="details__list">
           <li class="details__item" v-for="deal in customerDeals" :key="deal.id">
@@ -108,10 +108,10 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
         </ul>
         <button class="details__deals" v-if="customerDeals.length > 3">Load More</button>
       </div>
-    </div>
-    <div class="details__no" v-else>
-      <img src="/Deals.png" alt="no-deals" class="deals__no-img" />
-      <p class="deals__no-descr">No deals.found</p>
+      <div class="details__no" v-else>
+        <img src="/Deals.png" alt="no-deals" class="details__no-img" />
+        <p class="details__no-descr">No deals found</p>
+      </div>
     </div>
   </div>
 
@@ -265,8 +265,18 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
     }
   }
   &__no {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: $gray-20;
-    padding: 9px 24px;
+    padding: 15px 24px;
+    .details__no-img {
+      width: 34px;
+      height: 34px;
+    }
+    .details__no-descr {
+      @include gray-descr;
+    }
   }
 }
 </style>
