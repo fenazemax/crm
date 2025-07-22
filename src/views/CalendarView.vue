@@ -2,7 +2,7 @@
 
 <template>
   <div class="no-calendar">
-    <img src="./Calendar.png" alt="calendar" class="no-calendar__img" />
+    <img src="/Calendar.png" alt="calendar" class="no-calendar__img" />
     <p class="no-calendar__descr">Calendar coming soon</p>
   </div>
 </template>

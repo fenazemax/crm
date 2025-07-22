@@ -38,7 +38,7 @@ const username = computed(() => {
   <div class="header-container">
     <div class="header">
       <RouterLink to="/" class="header__logo-link">
-        <img src="./Logo.png" class="header__img" />
+        <img src="/Logo.png" class="header__img" />
       </RouterLink>
       <h2 class="header__title">{{ pageTitle }}</h2>
     </div>

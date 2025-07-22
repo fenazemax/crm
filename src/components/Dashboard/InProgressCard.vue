@@ -47,7 +47,7 @@ const formatedAddress = computed(() => {
   </div>
   <div class="no-current" v-else>
     <div class="no-current__wrapper">
-      <img src="./Calendar.png" alt="no-deals" class="wrapper__img" />
+      <img src="/Calendar.png" alt="no-deals" class="wrapper__img" />
       <p class="wrapper__descr">No deals in progress</p>
     </div>
   </div>

@@ -110,7 +110,7 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
       </div>
     </div>
     <div class="details__no" v-else>
-      <img src="./Deals.png" alt="no-deals" class="deals__no-img" />
+      <img src="/Deals.png" alt="no-deals" class="deals__no-img" />
       <p class="deals__no-descr">No deals.found</p>
     </div>
   </div>

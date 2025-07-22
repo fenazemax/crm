@@ -13,7 +13,7 @@ const dealCount = computed(() => dealStore.deals.length)
       <p :class="dealCount === 0 ? 'deal__count-0' : 'deal__count'">{{ dealCount }}</p>
     </div>
     <img
-      :src="dealCount > 0 ? './red-count.png' : './gray-count-deal.png'"
+      :src="dealCount > 0 ? '/red-count.png' : '/gray-count-deal.png'"
       alt="deal"
       :class="dealCount > 0 ? 'deal__image' : 'deal__image-0'"
     />

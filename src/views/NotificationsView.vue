@@ -2,7 +2,7 @@
 
 <template>
   <div class="no-notifications">
-    <img src="./Notification.png" alt="Notification" class="no-notifications__img" />
+    <img src="/Notification.png" alt="Notification" class="no-notifications__img" />
     <p class="no-notifications__descr">Notifications coming soon</p>
   </div>
 </template>

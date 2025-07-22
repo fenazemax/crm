@@ -108,7 +108,7 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
     </ul>
   </div>
   <div class="customers-no" v-else>
-    <img src="./Customers.png" alt="no-customers" class="customers-no__img" />
+    <img src="/Customers.png" alt="no-customers" class="customers-no__img" />
     <p class="customers-no__descr">No customers found.</p>
   </div>
   <BaseModal :type="ModalType.EditModal">

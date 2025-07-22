@@ -67,7 +67,7 @@ const openEditModal = (task: ITask) => {
     </ul>
   </div>
   <div class="tasks-no" v-else>
-    <img src="./Tasks.png" alt="No tasks" class="tasks-no__img" />
+    <img src="/Tasks.png" alt="No tasks" class="tasks-no__img" />
     <p class="tasks-no__descr">No tasks found</p>
   </div>
   <BaseModal :type="ModalType.EditModal">

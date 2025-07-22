@@ -16,12 +16,12 @@ const createDeal = () => {
 <template>
   <div class="modal__main">
     <button class="modal__link border btn-pointer" @click="createDeal">
-      <img src="./Deals.png" class="modal__img" />
+      <img src="/Deals.png" class="modal__img" />
       <p class="modal__title-link">Deal</p>
       <ArrowAdd class="modal__arrow" />
     </button>
     <button class="modal__link btn-pointer" @click="addCustomer">
-      <img src="./Customers.png" class="modal__img" />
+      <img src="/Customers.png" class="modal__img" />
       <p class="modal__title-link">Customer</p>
       <ArrowAdd class="modal__arrow" />
     </button>

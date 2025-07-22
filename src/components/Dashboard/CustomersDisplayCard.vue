@@ -27,7 +27,7 @@ const firstThreeCustomers = computed(() => {
   </div>
   <div class="no-display" v-else>
     <div class="no-display__container">
-      <img src="./Customers.png" alt="no-customers" class="no-display__img" />
+      <img src="/Customers.png" alt="no-customers" class="no-display__img" />
       <p class="no-display__descr">No customers found.</p>
     </div>
   </div>
