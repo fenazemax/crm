@@ -35,7 +35,7 @@ const sortedDeals = computed(() =>
     </div>
   </div>
   <div class="no-deals" v-else>
-    <img src="/Deals.png" alt="no deals" class="no-deals__img" />
+    <img src="./Deals.png" alt="no deals" class="no-deals__img" />
     <p class="no-deals__descr">No deals found.</p>
   </div>
 </template>

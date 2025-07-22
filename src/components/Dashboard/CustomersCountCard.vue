@@ -13,7 +13,7 @@ const count = customerStore.customers.length
       <p :class="count === 0 ? 'customer__count-0' : 'customer__count'">{{ count }}</p>
     </div>
     <img
-      :src="count > 0 ? '/green-count.png' : '/gray-count.png'"
+      :src="count > 0 ? './green-count.png' : './gray-count.png'"
       alt="customer"
       :class="count > 0 ? 'customer__image' : 'customer__image-0'"
     />

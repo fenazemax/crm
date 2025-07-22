@@ -114,7 +114,7 @@ const sortedDealsHalf = computed(() => sortedDeals.value.slice(0, 7))
     </ul>
   </div>
   <div class="deals-no" v-else>
-    <img src="/Deals.png" alt="no-deals" class="deals-no__img" />
+    <img src="./Deal.png" alt="no-deals" class="deals-no__img" />
     <p class="deals-no__descr">No deals found.</p>
   </div>
   <BaseModal :type="ModalType.EditModal">

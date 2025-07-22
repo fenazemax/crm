@@ -42,7 +42,7 @@ const formatedTasks = computed(() => {
   </div>
   <div class="no-tasks" v-else>
     <div class="no-tasks__container">
-      <img src="/Tasks.png" alt="no-task" class="no-tasks__img" />
+      <img src="./Tasks.png" alt="no-task" class="no-tasks__img" />
       <p class="no-tasks__descr">No upcoming tasks found.</p>
       <div class="tasks__container" @click="modalStore.openModal(ModalType.Todo)" style="cursor: pointer">
         <StatusArrowIcon />

@@ -62,7 +62,7 @@ const openDealDetails = async () => {
   </div>
   <div class="no-deals" v-else>
     <div class="no-deals__wrapper">
-      <img src="/Calendar.png" alt="no-deals" class="no-deals__img" />
+      <img src="./Calendar.png" alt="no-deals" class="no-deals__img" />
       <p class="no-deals__descr">No upcoming appointments</p>
     </div>
     <button class="advanced-btn btn-pointer position-btn">Add deal?</button>
