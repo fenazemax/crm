@@ -1,1 +1,0 @@
-import{q as s,b as n,f as e,J as c,p as o}from"./index-Dfbpmmlt.js";const r={},t={class:"no-calendar"};function l(_,a){return o(),n("div",t,a[0]||(a[0]=[e("img",{src:c,alt:"calendar",class:"no-calendar__img"},null,-1),e("p",{class:"no-calendar__descr"},"Calendar coming soon",-1)]))}const i=s(r,[["render",l],["__scopeId","data-v-9f9e785e"]]);export{i as default};
