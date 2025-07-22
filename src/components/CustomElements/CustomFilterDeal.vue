@@ -9,8 +9,8 @@ const isOpen = ref(false)
 
 const statusOption: TOptions[] = [
   { value: 'all', label: 'All' },
-  ...Object.entries(EnumProgress).map(([value, label]) => ({
-    value,
+  ...Object.entries(EnumProgress).map(([, label]) => ({
+    value: label,
     label,
   })),
 ]
@@ -35,7 +35,7 @@ const selectStatus = (status: string) => {
 <style scoped lang="scss">
 @use '@/assets/base' as *;
 .filter {
-  display: flex;
+  @include flexbox-column;
   &__descr {
     @include def-btn;
     display: flex;
@@ -53,6 +53,25 @@ const selectStatus = (status: string) => {
     }
     &:active {
       background-color: $gray-50;
+    }
+  }
+  &__dropdown {
+    @include flexbox-column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .filter__item {
+      padding: 5px;
+      border: 1px solid $gray-50;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background-color: $gray-30;
+      }
+      &:acitve {
+        background-color: $gray-50;
+      }
     }
   }
 }

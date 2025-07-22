@@ -102,7 +102,7 @@ useEventListener('keydown', (e) => {
         <p class="modal__title">Phone</p>
         <input type="text" class="modal__input" v-model="phoneInput" />
         <p class="input__error" v-if="isValidPhone === false && phoneInput.length > 5">
-          Wrong number format, please use US-format number
+          Wrong number format, please use US-format number (like +1 (212) 333-4444. )
         </p>
       </div>
       <div class="modal__address">

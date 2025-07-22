@@ -40,7 +40,6 @@ const updateDeal = (updatedDeal: IDeal) => {
 }
 
 const { filteredSortedDeals } = useSortedDeals(dealStore.deals, sortedBy, filteredBy)
-const sortedDealsHalf = computed(() => filteredSortedDeals.value.slice(0, 7))
 </script>
 
 <template>
@@ -66,7 +65,7 @@ const sortedDealsHalf = computed(() => filteredSortedDeals.value.slice(0, 7))
         <p class="deals__head-item">Status</p>
         <p class="deals__head-item">Edit</p>
       </li>
-      <li class="deals__item" v-for="deal in sortedDealsHalf" :key="deal.id">
+      <li class="deals__item" v-for="deal in filteredSortedDeals" :key="deal.id">
         <RouterLink :to="`/deal/${deal.id}`" class="deals__link">
           <img :src="deal.image" alt="" class="item__image" />
           <p class="deals__name">
