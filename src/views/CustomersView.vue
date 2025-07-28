@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import CustomFilterDeal from '@/components/CustomElements/CustomFilterDeal.vue'
 import CustomSortDeal from '@/components/CustomElements/CustomSortDeal.vue'
 import ImageIcon from '@/components/Icons/ImageIcon.vue'
 import { useCustomerStore } from '@/stores/customerStore'
@@ -44,7 +43,6 @@ const updateCustomer = (updatedCustomer: ICustomer) => {
       <p class="customers__count">Total: {{ customersCount }} customers</p>
       <div class="customers__sort-container">
         <CustomSortDeal v-model="sortedBy" :options="sortOptions" />
-        <CustomFilterDeal />
       </div>
     </div>
     <ul class="customers__list" v-if="isAll === false">
